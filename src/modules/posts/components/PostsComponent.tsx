@@ -31,7 +31,7 @@ const PostsComponent = () => {
 
     return (
         <div>
-            <PostsForm handleSubmit={handleSubmitPost} handleChangeTitle={handleChangeTitle} handleChangeBody={handleChangeBody}/>
+            <PostsForm handleSubmit={handleSubmitPost} handleChangeTitle={handleChangeTitle} handleChangeBody={handleChangeBody} />
             <div className="mt-1">Lista postów</div>
             <div className="row">
                 <div className="col-12">
