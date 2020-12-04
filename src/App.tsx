@@ -1,27 +1,32 @@
 import React from 'react';
 import './App.css';
-import PostsContainer from "./modules/posts/components/PostsContainer";
+import PostsComponent from "./modules/posts/components/PostsComponent";
 import {Link, Route, BrowserRouter as Router, Switch} from "react-router-dom";
 
 function App() {
   return (
   <Router>
     <div className="App">
-        <ul>
-            <li>
-                <Link to="/">Home</Link>
-            </li>
-            <li>
-                <Link to="/posts">Posty</Link>
-            </li>
-            <li>
-                <Link to="/users">Users</Link>
-            </li>
-        </ul>
+        <div className="container">
+
+            <nav className="nav">
+                <ul className="nav">
+                    <li className="nav-item">
+                        <Link className="nav-link" to="/">Home</Link>
+                    </li>
+                    <li>
+                        <Link className="nav-link" to="/posts">Posts</Link>
+                    </li>
+                    <li>
+                        <Link className="nav-link" to="/users">Users</Link>
+                    </li>
+                </ul>
+            </nav>
+        </div>
         <div className="container">
             <Switch>
                 <Route path="/posts">
-                    <PostsContainer />
+                    <PostsComponent />
                 </Route>
                 <Route path="/users">
                     Tu na userów
