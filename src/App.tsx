@@ -17,9 +17,6 @@ function App() {
                     <li>
                         <Link className="nav-link" to="/posts">Posts</Link>
                     </li>
-                    <li>
-                        <Link className="nav-link" to="/users">Users</Link>
-                    </li>
                 </ul>
             </nav>
         </div>
@@ -27,9 +24,6 @@ function App() {
             <Switch>
                 <Route path="/posts">
                     <PostsComponent />
-                </Route>
-                <Route path="/users">
-                    Tu na userów
                 </Route>
                 <Route path="/">
                     Home

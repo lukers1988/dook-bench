@@ -11,7 +11,6 @@ export const addPost = (post: PostInterface) => ({
     type: ADD_POST, post
 });
 
-
 export const getPosts = () => ({
     type: GET_POSTS
 });

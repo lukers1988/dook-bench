@@ -1,13 +1,17 @@
 import React from 'react';
-import {PostInterface} from "../actions";
+import { PostInterface } from "../actions";
+import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { postsSelector } from "../selector";
 
 interface Posts {
-    posts: PostInterface[]
+    path: string
 }
 
 const PostsList: React.FC<Posts> = ({
-    posts
+    path
 }) => {
+    const { posts } = useSelector(postsSelector);
     return (
         <>
             {posts.map((post: PostInterface, index: number) => {
@@ -17,6 +21,9 @@ const PostsList: React.FC<Posts> = ({
                     </div>
                     <div className="card-body">
                         {post.body}
+                    </div>
+                    <div className="card-footer">
+                        <Link to={`${path}/${post.id}/show`} > Comments </Link>
                     </div>
                 </div>
             })}
