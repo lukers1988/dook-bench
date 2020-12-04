@@ -21,12 +21,6 @@ const PostsList: React.FC<Posts> = ({
                 </div>
             })}
         </>
-        // <div className="card">
-        //     <div className="card-body">
-        //         {posts?.map((post: PostInterface, index: number)  => {
-        //             return <div key={index}>{post.title}</div> })}
-        //     </div>
-        // </div>
     )
 }
 
